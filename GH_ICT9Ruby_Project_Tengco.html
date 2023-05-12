@@ -1,0 +1,44 @@
+
+<html>
+<head>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+	<title>Length Converter</title>
+</head>
+<body class="bg-dark">
+	<br>
+	<div align="center" class="container bg-warning"><br>
+	<h1 style="text-shadow: 5px 3px 3px white;">Metric Unit Converter</h1><br>
+	<img src="https://img.freepik.com/premium-vector/mens-hands-hold-measuring-tape_169241-484.jpg" class="rounded" height="250"><br><br>
+	<input type="text" id="id1" placeholder="Enter the value">&nbsp;Millimeters<br><br>
+	<input type="submit" class="btn-danger" value="Convert to Centimeters" onclick="CentimeterFunction()">&nbsp;
+	<input type="submit" class="btn-primary" value="Convert to Meters" onclick="MeterFunction()">&nbsp;
+	<input type="submit" class="btn-success" value="Convert to Kilometers" onclick="KilometerFunction()"><br><br>
+	<p id="given"></p>
+	<p id="answer"></p>
+	<script>
+		function CentimeterFunction() {
+			var mm = document.getElementById('id1').value;
+			var cm = Number(mm) / 10;
+			document.getElementById('given').innerHTML = mm + " mm is equal to";
+			document.getElementById('answer').innerHTML = cm + " centimeters";
+		}
+	</script><br>
+	<script>
+		function MeterFunction() {
+			var mm = document.getElementById('id1').value;
+			var m = Number(mm) / 1000;
+			document.getElementById('given').innerHTML = mm + " mm is equal to";
+			document.getElementById('answer').innerHTML = m + " meters";
+		}
+	</script><br>
+	<script>
+		function KilometerFunction() {
+			var mm = document.getElementById('id1').value;
+			var km = Number(mm) / 1000000;
+			document.getElementById('given').innerHTML = mm + " mm is equal to";
+			document.getElementById('answer').innerHTML = km + " kilometers";
+		}
+	</script><br>
+	</div>
+</body>
+</html>
